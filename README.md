@@ -1,2 +1,5 @@
 # yt-short-automation
-automating the task of creating yt shorts using blog's
+automating the task of creating yt shorts using blogs
+```bash
+sh setup.sh
+```
