@@ -16,7 +16,7 @@ public class AutoYtShortsApplication {
 
 	public static void main(String[] args) {
 
-		String filePath = "./links.txt";
+		String filePath = "/home/blitz/blitz/proj/yt-short-automation/AutoYtShorts/links.txt";
 
 		try{
 
@@ -30,19 +30,22 @@ public class AutoYtShortsApplication {
 			Elements paragraphs= doc.select("p");
 
 			StringBuilder blogContent = new StringBuilder();
-			blogContent.append("title: ").append(title).append("\n");
+			blogContent.append(title).append("\n");
 			for (Element paragraph : paragraphs){
 				blogContent.append(paragraph.text());
 			}
 
-			try(FileWriter writer = new FileWriter("./content.txt")){
+			try(FileWriter writer = new FileWriter("/home/blitz/blitz/proj/yt-short-automation/AutoYtShorts/content.txt")){
 				writer.write(blogContent.toString());
 			}
+
+			System.out.println("done");
 			//blogLinks.removeFirst();
 			//Files.write(path, blogLinks);
 
 		}
 		catch (IOException e){
+			System.out.println("error");
 			System.out.println(e.getMessage());
 		}
 	}
