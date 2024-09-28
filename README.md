@@ -1,5 +1,7 @@
-# yt-short-automation
-automating the task of creating yt shorts using blogs
+# blogtube
+automating the task of creating yt shorts using blogs.
+
+to change blog, just edit links.txt in directory!
 ```bash
 sh setup.sh
 ```
