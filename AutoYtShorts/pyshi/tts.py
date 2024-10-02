@@ -6,8 +6,6 @@ tts.to("cuda")
 input_file_path = "short.txt"
 output_file_path = "output.wav"
 
-speaker_id = 12
-
 with open(input_file_path, "r") as file:
     text = file.read()
 

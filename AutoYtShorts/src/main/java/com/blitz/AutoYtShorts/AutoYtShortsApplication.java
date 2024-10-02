@@ -6,19 +6,19 @@ import org.jsoup.select.Elements;
 import org.jsoup.nodes.Document;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.HashSet;
 
 public class AutoYtShortsApplication {
 
 	public static void main(String[] args) {
 
-		String filePath = "/home/blitz/blitz/proj/yt-short-automation/AutoYtShorts/links.txt";
+		String filePath = "AutoYtShorts/links.txt";
 
-		try{
+		try {
 
 			Path path = Paths.get(filePath);
 			List<String> blogLinks = Files.readAllLines(path);
@@ -26,28 +26,28 @@ public class AutoYtShortsApplication {
 
 			Document doc = Jsoup.connect(url).get();
 
-			String title = doc.title();
-			Elements paragraphs= doc.select("p");
+			Elements paragraphs = doc.select("p, td");
 
+			//hashset for avoiding duplication
+			HashSet<String> seenText = new HashSet<>();
 			StringBuilder blogContent = new StringBuilder();
-			blogContent.append(title).append("\n");
-			for (Element paragraph : paragraphs){
-				blogContent.append(paragraph.text());
+
+			for (Element paragraph : paragraphs) {
+				String text = paragraph.text();
+				if (!seenText.contains(text) && !text.trim().isEmpty()) {
+					blogContent.append(text).append("\n");
+					seenText.add(text);
+				}
 			}
 
-			try(FileWriter writer = new FileWriter("/home/blitz/blitz/proj/yt-short-automation/AutoYtShorts/content.txt")){
+			try (FileWriter writer = new FileWriter("AutoYtShorts/content.txt")) {
 				writer.write(blogContent.toString());
 			}
 
 			System.out.println("done");
-			//blogLinks.removeFirst();
-			//Files.write(path, blogLinks);
-
-		}
-		catch (IOException e){
+		} catch (Exception e) {
 			System.out.println("error");
 			System.out.println(e.getMessage());
 		}
 	}
-
 }
