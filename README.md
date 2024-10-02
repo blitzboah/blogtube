@@ -1,12 +1,16 @@
 # blogtube
-automating the task of creating yt shorts using blogs.
+automating the task of creating yt videos and shorts using blogs.
 
 to change blog, just edit links.txt in directory!
 ```bash
+#arch
+sudo pacman -S ffmpeg maven
+```
+```bash
+#create your virtual env if not already then
+pip install sumy nltk coqui-tts
+```
+```bash
+#run this
 sh setup.sh
 ```
-need to work on:
-1. different tts mp male voice
-2. subtitles
-3. video quality
-4. maybe not summarizing the blog but making video in parts according to blog who know
