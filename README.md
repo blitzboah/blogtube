@@ -12,3 +12,4 @@ pip install sumy nltk coqui-tts
 #run this
 sh setup.sh
 ```
+used java for scraping just to feel somthing
