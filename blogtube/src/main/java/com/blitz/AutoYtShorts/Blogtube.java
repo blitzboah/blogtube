@@ -12,11 +12,11 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.HashSet;
 
-public class AutoYtShortsApplication {
+public class Blogtube {
 
 	public static void main(String[] args) {
 
-		String filePath = "AutoYtShorts/links.txt";
+		String filePath = "blogtube/links.txt";
 
 		try {
 
@@ -40,7 +40,7 @@ public class AutoYtShortsApplication {
 				}
 			}
 
-			try (FileWriter writer = new FileWriter("AutoYtShorts/content.txt")) {
+			try (FileWriter writer = new FileWriter("blogtube/content.txt")) {
 				writer.write(blogContent.toString());
 			}
 
