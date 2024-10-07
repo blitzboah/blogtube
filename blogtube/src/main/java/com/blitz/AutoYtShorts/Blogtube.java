@@ -16,7 +16,7 @@ public class Blogtube {
 
 	public static void main(String[] args) {
 
-		String filePath = "blogtube/links.txt";
+		String filePath = "links.txt";
 
 		try {
 
@@ -40,14 +40,14 @@ public class Blogtube {
 				}
 			}
 
-			try (FileWriter writer = new FileWriter("blogtube/content.txt")) {
+			try (FileWriter writer = new FileWriter("content.txt")) {
 				writer.write(blogContent.toString());
 			}
 
 			System.out.println("done");
 		} catch (Exception e) {
 			System.out.println("error");
-			System.out.println(e.getMessage());
+			e.getMessage();
 		}
 	}
 }

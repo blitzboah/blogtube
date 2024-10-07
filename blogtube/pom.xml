@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.blitz</groupId>
-	<artifactId>AutoYtShorts</artifactId>
+	<artifactId>Blogtube</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AutoYtShorts</name>
 	<description>automated-yt-shorts</description>

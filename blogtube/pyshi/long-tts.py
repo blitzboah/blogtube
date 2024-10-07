@@ -2,8 +2,6 @@ from TTS.api import TTS
 
 
 tts = TTS(model_name="tts_models/en/ljspeech/fast_pitch", progress_bar=True)
-
-
 tts.to("cuda")
 
 
@@ -18,7 +16,7 @@ with open(input_file_path, "r") as file:
 with open(intro_file_path, "r") as file:
     intro_text = file.read()
 
-final_text = f"{intro_text}\n{text}"
+final_text = intro_text + " " + text 
 length_scale = 0.8
 
 
