@@ -1,5 +1,6 @@
 # blogtube
 automating the task of creating yt videos and shorts using blogs.
+also have a background video downloaded in pyshi directory, save it as background.mp4
 ```bash
 #arch
 sudo pacman -S ffmpeg maven
