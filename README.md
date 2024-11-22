@@ -6,7 +6,7 @@ also have a background video downloaded in pyshi directory, save it as backgroun
 sudo pacman -S ffmpeg maven
 ```
 ```bash
-#create your virtual env if not already then
+#create your virtual env and source /env-name/bin/activate to activate py env
 pip install sumy nltk coqui-tts
 ```
 ```bash
