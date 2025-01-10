@@ -12,6 +12,7 @@ pip install requirements.txt
 ```bash
 #run this
 cd blogtube/
+mvn clean install
 sh setup.sh
 ```
 used java for scraping just to feel somthing
