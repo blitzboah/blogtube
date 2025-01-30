@@ -2,14 +2,9 @@
 automating the task of creating yt videos and shorts using blogs.
 download an external video in pyshi directory and save it as background.mp4
 
+https://github.com/user-attachments/assets/59acba5a-2650-4aed-a8fd-b4661d524a19
 
-
-https://github.com/user-attachments/assets/ea8b4394-01ba-48f3-b91f-c69b041422a2
-
-
-
-https://github.com/user-attachments/assets/163ea00c-a8e1-461f-8436-8436f324c087
-
+https://github.com/user-attachments/assets/0a283749-03f2-44f7-9c3a-2f798938bea5
 
 ```bash
 #arch
