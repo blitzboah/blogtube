@@ -4,7 +4,7 @@ download an external video in pyshi directory and save it as background.mp4
 
 https://github.com/user-attachments/assets/59acba5a-2650-4aed-a8fd-b4661d524a19
 
-https://github.com/user-attachments/assets/0a283749-03f2-44f7-9c3a-2f798938bea5
+https://github.com/user-attachments/assets/e26bd3d0-e9f1-4305-9b45-656264374367
 
 ```bash
 #arch
